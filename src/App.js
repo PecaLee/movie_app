@@ -2,45 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 class App extends React.Component {
-  constructor(props) {
-    //자바스크립트 단에서 움직임
-    super(props);
-    console.log("start");
-  }
-
-  componentDidMount() {
-    console.log("component mounted");
-  }
-
-  componentDidUpdate() {
-    console.log("component updated");
-  }
-
-  componentWillUnmount() {
-    console.log("conponent unmounted");
-  }
-
   state = {
-    count: 0,
+    isLoading: true,
+    movies: [],
   };
-
-  add = () => {
-    this.setState((current) => ({ count: current.count + 1 }));
-  };
-
-  minus = () => {
-    this.setState((current) => ({ count: current.count - 1 }));
-  };
-
+  componentDidMount() {
+    setTimeout(() => this.setState({ isLoading: false }), 6000);
+  }
   render() {
-    console.log("render");
-    return (
-      <div>
-        <h1>The number is : {this.state.count}</h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    );
+    const { isLoading } = this.state;
+    return <div>{isLoading ? "loading..." : "We are ready"}</div>;
   }
 }
 
