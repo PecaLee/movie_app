@@ -2,6 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 
 class App extends React.Component {
+  constructor(props) {
+    //자바스크립트 단에서 움직임
+    super(props);
+    console.log("start");
+  }
+
+  componentDidMount() {
+    console.log("component mounted");
+  }
+
+  componentDidUpdate() {
+    console.log("component updated");
+  }
+
+  componentWillUnmount() {
+    console.log("conponent unmounted");
+  }
+
   state = {
     count: 0,
   };
@@ -15,6 +33,7 @@ class App extends React.Component {
   };
 
   render() {
+    console.log("render");
     return (
       <div>
         <h1>The number is : {this.state.count}</h1>
