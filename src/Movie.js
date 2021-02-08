@@ -16,7 +16,7 @@ function Movie({ id, year, title, summary, poster, rating, genres }) {
             </li>
           ))}
         </ul>
-        <h5 className="movie__rating">rating : {rating}</h5>
+        <h6 className="movie__rating">rating : {rating}</h6>
         <p className="movie__summary">{summary.slice(0, 160)}...</p>
       </div>
     </div>
