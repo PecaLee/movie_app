@@ -1,0 +1,22 @@
+html {
+  background-color: #f2f2f2;
+  body {
+    display: flex;
+    justify-content: center;
+    .container {
+      .loader {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .movies {
+        padding: 10pt 50pt 10pt 50pt;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}
