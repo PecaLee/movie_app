@@ -1,0 +1,15 @@
+.Nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  top: 3em;
+  left: 3em;
+  border-radius: 12px;
+  z-index: 3;
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
+  a {
+    line-height: 2em;
+  }
+}
